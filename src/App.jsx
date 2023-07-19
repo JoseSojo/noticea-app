@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import NotDefined from './assets/this-not-defined.jpg';
 import {allCountrys, apiKey} from './Constanst';
 import Badge from './components/Badge';
 import Notice from './components/Notice';
