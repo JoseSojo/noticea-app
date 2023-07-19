@@ -12,11 +12,7 @@ export default function App() {
   useEffect(()=> {
     fetch(url)
       .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        //setNotice(data.articles)
-        //console.log(data);
-    })
+      .then(data => setNotice(data.articles))
   }, [country]);
 
   const handleClickCountry = e => setCountry(e.target.innerText);
@@ -43,8 +39,9 @@ export default function App() {
 
       <main className='grid grid-cols-1 md:grid-cols-2 grid-gap-4 p-4 bg-gray-300'>
         {
-          notices.map(key =>
+          notices.map((key, index) =>
             <Notice
+              key={index}
               urlToImage={key.urlToImage}
               author={key.uthor}
               title={key.title}
