@@ -11,10 +11,7 @@ export default function App() {
 
   useEffect(()=> {
     fetch(url)
-    .then(res => {
-      res.json();
-      console.log(res);
-    })
+    .then(res => res.json())
     .then(data => {
       console.log(data);
       //setNotice(data.articles)
